@@ -78,25 +78,22 @@
 </form>
 
 <script>
-  function submitEmail(event) {
-    event.preventDefault(); // Prevent form from refreshing the page
-    const email = document.getElementById("email").value;
-    
-    fetch("https://script.google.com/macros/s/AKfycbz-69GcNOp9xTo8kn-SbB7APDt9UtLygJuzAa53SArVWZKIZLD5D2cyoPyHWWlK_79y/exec", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email: email })
-    })
-    .then(response => response.json())
-    .then(data => {
-      if (data.result === "success") {
-        alert("Thanks for signing up!");
-      } else {
-        alert("There was a problem. Please try again.");
-      }
-    })
-    .catch(error => console.error("Error:", error));
-  }
+function submitEmail(event) {
+  event.preventDefault(); // Prevent form from refreshing the page
+  const email = document.getElementById("email").value;
+  
+  fetch("https://script.google.com/macros/s/AKfycbz-69GcNOp9xTo8kn-SbB7APDt9UtLygJuzAa53SArVWZKIZLD5D2cyoPyHWWlK_79y/exec", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email: email }),
+    mode: "no-cors" // Suppress CORS preflight
+  })
+  .then(() => {
+    // Notify user that submission is complete, without checking response
+    alert("Thanks for signing up!");
+  })
+  .catch(error => console.error("Error:", error));
+}
 </script>
     <footer>&copy; 2024 Limit Labs LLC | All Rights Reserved</footer>
   </div>
