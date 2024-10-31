@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Limit Labs</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: #0f0f0f;
+      color: #f0f0f0;
+    }
+    .container {
+      text-align: center;
+      max-width: 500px;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: #76b2fe;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: #ddd;
+    }
+    .email-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    input[type="email"] {
+      padding: 0.8rem;
+      border: none;
+      border-radius: 5px;
+      width: 100%;
+      max-width: 400px;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+    button {
+      padding: 0.8rem 2rem;
+      background-color: #76b2fe;
+      border: none;
+      border-radius: 5px;
+      color: #0f0f0f;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #5a92d3;
+    }
+    footer {
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Limit Labs</h1>
+    <p>Unbounded worlds. AI-driven. Crafted by your vision.</p>
+    <form class="email-form" action="https://example.com/submit" method="post">
+      <input type="email" name="email" placeholder="Enter your email to stay updated" required>
+      <button type="submit">Join the Journey</button>
+    </form>
+    <footer>&copy; 2024 Limit Labs | All Rights Reserved</footer>
+  </div>
+</body>
+</html>
